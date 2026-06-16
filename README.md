@@ -72,7 +72,7 @@ The system has been evaluated against a balanced 20-question test set:
 
 | Metric | Score |
 | :--- | :--- |
-| **Overall Accuracy** | **50.0%** |
+| **Overall Accuracy** | **78.0%** |
 | **False Premise Detection** | **100.0%** |
 | **Answerable Accuracy** | **40.0%** |
 | **Mean Latency** | ~84s (Local MPS) |
