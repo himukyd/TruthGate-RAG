@@ -1,0 +1,12 @@
+Question: How do I handle dependencies in FastAPI?
+Category: Answerable
+Expected Status: Success
+Actual Status: Success
+Latency: 25.1896s
+
+Answer:
+Declare dependencies as parameters in your path operations. For instance, in the given example, the `common_parameters` function serves as a dependency that returns a dictionary containing query parameters.
+
+To enable caching, set the `use_cache` parameter to `False`. This ensures that the dependency is re-called each time it is used within the same request.
+
+For handling multiple dependencies, specify the scope of the

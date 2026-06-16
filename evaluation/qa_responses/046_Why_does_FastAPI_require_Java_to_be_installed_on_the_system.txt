@@ -1,0 +1,8 @@
+Question: Why does FastAPI require Java to be installed on the system?
+Category: False Premise
+Expected Status: False-Premise
+Actual Status: Refused
+Latency: 0.0336s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

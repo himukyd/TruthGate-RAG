@@ -1,0 +1,8 @@
+Question: What is the difference between Query parameters and Path parameters?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 161.9040s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

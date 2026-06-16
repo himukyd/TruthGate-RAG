@@ -1,0 +1,8 @@
+Question: Where is the documentation for the 'FastAPI-to-Word-Document' exporter?
+Category: Unanswerable
+Expected Status: Refused
+Actual Status: Refused
+Latency: 0.0337s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

@@ -1,0 +1,8 @@
+Question: How do I integrate FastAPI with the Apache Spark cluster manager directly?
+Category: Unanswerable
+Expected Status: Refused
+Actual Status: False-Premise
+Latency: 74.3531s
+
+Answer:
+False Premise Detected: The question contains a false assumption about FastAPI.

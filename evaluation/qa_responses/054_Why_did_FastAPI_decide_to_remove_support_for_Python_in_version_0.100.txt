@@ -1,0 +1,8 @@
+Question: Why did FastAPI decide to remove support for Python in version 0.100?
+Category: False Premise
+Expected Status: False-Premise
+Actual Status: Refused
+Latency: 0.0291s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

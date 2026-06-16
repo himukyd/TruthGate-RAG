@@ -1,0 +1,8 @@
+Question: How do you define a response model for a path operation?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0559s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

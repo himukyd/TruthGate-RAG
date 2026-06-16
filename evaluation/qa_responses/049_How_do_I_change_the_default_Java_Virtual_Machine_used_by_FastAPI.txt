@@ -1,0 +1,8 @@
+Question: How do I change the default Java Virtual Machine used by FastAPI?
+Category: False Premise
+Expected Status: False-Premise
+Actual Status: Refused
+Latency: 0.0307s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

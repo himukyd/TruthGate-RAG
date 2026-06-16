@@ -1,0 +1,8 @@
+Question: What is the built-in function to convert FastAPI routes to Cobol logic?
+Category: Unanswerable
+Expected Status: Refused
+Actual Status: False-Premise
+Latency: 74.5576s
+
+Answer:
+False Premise Detected: The question contains a false assumption about FastAPI.

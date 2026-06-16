@@ -1,0 +1,16 @@
+Question: How do I define a path parameter in FastAPI?
+Category: Answerable
+Expected Status: Success
+Actual Status: Success
+Latency: 169.2128s
+
+Answer:
+To define a path parameter in FastAPI, you use the `Path` decorator. For example:
+```python
+from fastapi import Path
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int = Path(...)):
+    return {"item_id": item_id}
+```
+This sets `item_id` as a path parameter that must be provided in the URL. The `Path(...)` annotation specifies that the parameter is required. The `...` indicates that the parameter is optional, but it is recommended to always provide a value for path parameters. The documentation for FastAPI's Path Operation Configuration provides more details on how to use path parameters. The FastAPI docs for Dependencies in path operation decorators also cover how to use path parameters with dependencies. The summary for the path operation should be provided using the `summary` annotation. The `tags` annotation is used to add tags to the path operation, which can be useful for grouping related operations in the OpenAPI documentation. The dependencies for the path operation can be defined using the `dependencies` annotation, which allows you to specify a list of dependencies that must be met for the path operation to be executed. The `summary` annotation is used to provide a summary for the path operation, which can be useful for describing the operation in the OpenAPI documentation. The `tags` annotation is used to add tags to the path operation, which can be useful for grouping related operations in the OpenAPI documentation. The dependencies for the path operation can be defined using the `dependencies` annotation, which allows you to specify a list of dependencies that must be met for the path operation to be executed. The `summary` annotation is used to provide a summary for the path operation, which can be useful for describing the operation in the OpenAPI documentation. The `tags` annotation is used to add tags to the path operation, which can be useful for grouping related operations in the OpenAPI documentation. The dependencies for the path operation can be defined using the `dependencies` annotation, which allows you to specify a list of dependencies that must be met for the path operation to be executed. The `summary` annotation is used to provide a summary for the path operation, which can be useful for describing the operation in the OpenAPI documentation. The `tags` annotation is used to add tags to the path operation, which can be useful for grouping related operations in the OpenAPI documentation. The dependencies for the path operation can be defined using the `dependencies` annotation

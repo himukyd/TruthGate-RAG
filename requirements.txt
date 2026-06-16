@@ -1,0 +1,55 @@
+# Backend API
+fastapi
+uvicorn[standard]
+
+# Frontend
+streamlit
+
+# LangChain
+langchain
+langchain-core
+langchain-community
+
+# Google Gemini (Optional now, kept for reference)
+# langchain-google-genai
+# google-generativeai
+
+# Local LLM Support
+transformers
+accelerate
+torch
+huggingface_hub
+langchain-huggingface
+
+# Vector Database
+chromadb
+langchain-chroma
+
+# Embeddings & Reranking
+sentence-transformers
+transformers
+torch
+
+# Web Scraping
+beautifulsoup4
+requests
+lxml
+
+# Data Processing
+pandas
+numpy
+
+# Text Splitting / Token Counting
+tiktoken
+
+# Progress Bars
+tqdm
+
+# Evaluation
+scikit-learn
+
+# Optional Graph Workflow
+langgraph
+
+# Testing
+pytest

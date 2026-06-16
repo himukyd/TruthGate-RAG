@@ -1,0 +1,8 @@
+Question: What is the command to run a FastAPI app with Uvicorn?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0554s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

@@ -1,0 +1,8 @@
+Question: Why does FastAPI require a Node.js runtime to handle WebSockets?
+Category: False Premise
+Expected Status: False-Premise
+Actual Status: False-Premise
+Latency: 69.7059s
+
+Answer:
+False Premise Detected: The question contains a false assumption about FastAPI.

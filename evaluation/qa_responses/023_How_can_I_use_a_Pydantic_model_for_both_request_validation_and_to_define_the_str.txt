@@ -1,0 +1,8 @@
+Question: How can I use a Pydantic model for both request validation and to define the structure of a nested JSON response?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0517s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

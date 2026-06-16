@@ -1,0 +1,6 @@
+Question 20/20
+Category: Unanswerable
+Expected: Refused
+Status: False-Premise
+Answer:
+False Premise Detected: The question contains a false assumption about FastAPI.

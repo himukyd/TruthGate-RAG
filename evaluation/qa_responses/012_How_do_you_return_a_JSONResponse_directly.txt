@@ -1,0 +1,8 @@
+Question: How do you return a JSONResponse directly?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0310s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

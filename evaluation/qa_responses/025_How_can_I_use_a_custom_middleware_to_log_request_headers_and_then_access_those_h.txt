@@ -1,0 +1,8 @@
+Question: How can I use a custom middleware to log request headers and then access those headers within a dependency?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0576s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

@@ -1,0 +1,8 @@
+Question: How can I combine OAuth2 authentication with a custom dependency that checks if a user is an 'admin'?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0973s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

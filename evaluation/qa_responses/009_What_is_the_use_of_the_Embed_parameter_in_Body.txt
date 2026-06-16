@@ -1,0 +1,8 @@
+Question: What is the use of the Embed parameter in Body?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0326s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

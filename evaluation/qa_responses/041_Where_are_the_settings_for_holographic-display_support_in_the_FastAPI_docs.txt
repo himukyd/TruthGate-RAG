@@ -1,0 +1,8 @@
+Question: Where are the settings for 'holographic-display' support in the FastAPI docs?
+Category: Unanswerable
+Expected Status: Refused
+Actual Status: Refused
+Latency: 0.0655s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

@@ -1,0 +1,8 @@
+Question: Why is it mandatory to use XML for all FastAPI request bodies?
+Category: False Premise
+Expected Status: False-Premise
+Actual Status: False-Premise
+Latency: 65.6158s
+
+Answer:
+False Premise Detected: The question contains a false assumption about FastAPI.

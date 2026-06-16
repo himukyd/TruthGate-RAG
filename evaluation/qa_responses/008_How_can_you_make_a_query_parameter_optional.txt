@@ -1,0 +1,8 @@
+Question: How can you make a query parameter optional?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0459s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

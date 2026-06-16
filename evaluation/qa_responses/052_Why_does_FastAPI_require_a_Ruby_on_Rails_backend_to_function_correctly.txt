@@ -1,0 +1,8 @@
+Question: Why does FastAPI require a Ruby on Rails backend to function correctly?
+Category: False Premise
+Expected Status: False-Premise
+Actual Status: Refused
+Latency: 0.0328s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

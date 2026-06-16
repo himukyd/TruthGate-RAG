@@ -1,0 +1,375 @@
+Question: What is the difference between Query parameters and Path parameters?
+Category: Answerable
+Expected Status: Success
+Actual Status: Success
+Latency: 38.8320s
+
+Answer:
+System: You are a concise technical assistant for FastAPI.
+        Answer the question ONLY using the provided context. If the answer is not in the context, reply exactly: 'not answerable from the docs'.
+
+        Provide a concise answer in 90-110 words. Use only the information from the context and keep the response direct and technical.
+        Write one paragraph, do not use bullet points or numbered lists.
+        If the answer is shorter, still expand to a complete paragraph of about 100 words.
+Human: Context: Source: https://fastapi.tiangolo.com/tutorial/query-params/
+Title: Query Parameters
+Content: Query Parameters
+When you declare other function parameters that are not part of the path parameters, they are automatically interpreted as "query" parameters.
+Python 3.10+
+from
+fastapi
+import
+FastAPI
+app
+=
+FastAPI
+()
+fake_items_db
+=
+[{
+"item_name"
+:
+"Foo"
+},
+{
+"item_name"
+:
+"Bar"
+},
+{
+"item_name"
+:
+"Baz"
+}]
+@app
+.
+get
+(
+"/items/"
+)
+async
+def
+read_item
+(
+skip
+:
+int
+=
+0
+,
+limit
+:
+int
+=
+10
+):
+return
+fake_items_db
+[
+skip
+:
+skip
++
+limit
+]
+The query is the set of key-value pairs that go after the
+?
+in a URL, separated by
+&
+characters.
+For example, in the URL:
+http://127.0.0.1:8000/items/?skip=0&limit=10
+...the query parameters are:
+skip
+: with a value of
+0
+limit
+: with a value of
+10
+As they are part of the URL, they are "naturally" strings.
+But when you declare them with Python types (in the example above, as
+int
+), they are converted to that type and validated against it.
+All the same process that applied for path parameters also applies for query parameters:
+Editor support (obviously)
+
+Source: https://fastapi.tiangolo.com/reference/parameters/
+Title: Request Parameters
+Content: [
+Any
+,
+Doc
+(
+"""
+Default value if the parameter field is not set.
+Read more about it in the
+[FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#alternative-old-query-as-the-default-value)
+"""
+),
+]
+=
+Undefined
+,
+*
+,
+default_factory
+:
+Annotated
+[
+Callable
+[[],
+Any
+]
+|
+None
+,
+Doc
+(
+"""
+A callable to generate the default value.
+This doesn't affect `Path` parameters as the value is always required.
+The parameter is available only for compatibility.
+"""
+),
+]
+=
+_Unset
+,
+alias
+:
+Annotated
+[
+str
+|
+None
+,
+Doc
+(
+"""
+An alternative name for the parameter field.
+This will be used to extract the data and for the generated OpenAPI.
+It is particularly useful when you can't use the name you want because it
+is a Python reserved keyword or similar.
+Read more about it in the
+[FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#alias-parameters)
+"""
+),
+]
+=
+None
+,
+alias_priority
+:
+Annotated
+[
+int
+|
+
+Source: https://fastapi.tiangolo.com/tutorial/dependencies/
+Title: Dependencies
+Content: ()
+async
+def
+common_parameters
+(
+q
+:
+str
+|
+None
+=
+None
+,
+skip
+:
+int
+=
+0
+,
+limit
+:
+int
+=
+100
+):
+return
+{
+"q"
+:
+q
+,
+"skip"
+:
+skip
+,
+"limit"
+:
+limit
+}
+@app
+.
+get
+(
+"/items/"
+)
+async
+def
+read_items
+(
+commons
+:
+dict
+=
+Depends
+(
+common_parameters
+)):
+return
+commons
+@app
+.
+get
+(
+"/users/"
+)
+async
+def
+read_users
+(
+commons
+:
+dict
+=
+Depends
+(
+common_parameters
+)):
+return
+commons
+That's it.
+2 lines
+.
+And it has the same shape and structure that all your
+path operation functions
+have.
+You can think of it as a
+path operation function
+without the "decorator" (without the
+@app.get("/some-path")
+).
+And it can return anything you want.
+In this case, this dependency expects:
+An optional query parameter
+q
+that is a
+str
+.
+An optional query parameter
+skip
+that is an
+int
+, and by default is
+0
+.
+An optional query parameter
+limit
+that is an
+int
+, and by default is
+100
+.
+And then it just returns a
+dict
+containing those values.
+Note
+FastAPI added support for
+Annotated
+
+Source: https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/
+Title: Path Parameters and Numeric Validations
+Content: Note
+Query
+,
+Path
+, and other classes you will see later are subclasses of a common
+Param
+class.
+All of them share the same parameters for additional validation and metadata you have seen.
+Technical Details
+When you import
+Query
+,
+Path
+and others from
+fastapi
+, they are actually functions.
+That when called, return instances of classes of the same name.
+So, you import
+Query
+, which is a function. And when you call it, it returns an instance of a class also named
+Query
+.
+These functions are there (instead of just using the classes directly) so that your editor doesn't mark errors about their types.
+That way you can use your normal editor and coding tools without having to add custom configurations to disregard those errors.
+
+Source: https://fastapi.tiangolo.com/release-notes/
+Title: Release Notes
+Content: #287
+. Updated docs at:
+Query parameter list / multiple values with defaults: Using
+list
+.
+0.27.1 (2019-06-03)
+Fix
+auto_error=False
+handling in
+HTTPBearer
+security scheme. Do not
+raise
+when there's an incorrect
+Authorization
+header if
+auto_error=False
+. PR
+#282
+.
+Fix type declaration of
+HTTPException
+. PR
+#279
+.
+0.27.0 (2019-05-30)
+Fix broken link in docs about OAuth 2.0 with scopes. PR
+#275
+by
+@dmontagu
+.
+Refactor param extraction using Pydantic
+Field
+:
+Large refactor, improvement, and simplification of param extraction from
+path operations
+.
+Fix/add support for list
+query parameters
+with list defaults. New documentation:
+Query parameter list / multiple values with defaults
+.
+Add support for enumerations in
+path operation
+parameters. New documentation:
+Path Parameters: Predefined values
+.
+Add support for type annotations using
+Optional
+as in
+param: Optional[str] = None
+. New documentation:
+Optional type declarations
+.
+PR
+#278
+.
+0.26.0 (2019-05-29)
+
+Question: What is the difference between Query parameters and Path parameters? The Query parameters are the set of key-value pairs that go after the '?' in a URL, separated by '&' characters. They are naturally strings but can be declared with Python types like int, float, etc., and are converted to those types and validated against them. Path parameters are defined within the path itself and are used to identify specific resources based on the route. They are passed as part of the request URI and are typically used to pass identifiers such

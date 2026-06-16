@@ -1,0 +1,403 @@
+Question: How do I define a path parameter in FastAPI?
+Category: Answerable
+Expected Status: Success
+Actual Status: Success
+Latency: 53.8479s
+
+Answer:
+System: You are a concise technical assistant for FastAPI.
+        Answer the question ONLY using the provided context. If the answer is not in the context, reply exactly: 'not answerable from the docs'.
+
+        Provide a concise answer in 90-110 words. Use only the information from the context and keep the response direct and technical.
+        Write one paragraph, do not use bullet points or numbered lists.
+        If the answer is shorter, still expand to a complete paragraph of about 100 words.
+Human: Context: Source: https://fastapi.tiangolo.com/reference/apirouter/
+Title: APIRouter class
+Content: """
+),
+]
+=
+None
+,
+tags
+:
+Annotated
+[
+list
+[
+str
+|
+Enum
+]
+|
+None
+,
+Doc
+(
+"""
+A list of tags to be applied to the *path operation*.
+It will be added to the generated OpenAPI (e.g. visible at `/docs`).
+Read more about it in the
+[FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+"""
+),
+]
+=
+None
+,
+dependencies
+:
+Annotated
+[
+Sequence
+[
+params
+.
+Depends
+]
+|
+None
+,
+Doc
+(
+"""
+A list of dependencies (using `Depends()`) to be applied to the
+*path operation*.
+Read more about it in the
+[FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+"""
+),
+]
+=
+None
+,
+summary
+:
+Annotated
+[
+str
+|
+None
+,
+Doc
+(
+"""
+A summary for the *path operation*.
+It will be added to the generated OpenAPI (e.g. visible at `/docs`).
+Read more about it in the
+
+Source: https://fastapi.tiangolo.com/reference/apirouter/
+Title: APIRouter class
+Content: """
+),
+]
+=
+None
+,
+tags
+:
+Annotated
+[
+list
+[
+str
+|
+Enum
+]
+|
+None
+,
+Doc
+(
+"""
+A list of tags to be applied to the *path operation*.
+It will be added to the generated OpenAPI (e.g. visible at `/docs`).
+Read more about it in the
+[FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+"""
+),
+]
+=
+None
+,
+dependencies
+:
+Annotated
+[
+Sequence
+[
+params
+.
+Depends
+]
+|
+None
+,
+Doc
+(
+"""
+A list of dependencies (using `Depends()`) to be applied to the
+*path operation*.
+Read more about it in the
+[FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+"""
+),
+]
+=
+None
+,
+summary
+:
+Annotated
+[
+str
+|
+None
+,
+Doc
+(
+"""
+A summary for the *path operation*.
+It will be added to the generated OpenAPI (e.g. visible at `/docs`).
+Read more about it in the
+
+Source: https://fastapi.tiangolo.com/reference/apirouter/
+Title: APIRouter class
+Content: """
+),
+]
+=
+None
+,
+tags
+:
+Annotated
+[
+list
+[
+str
+|
+Enum
+]
+|
+None
+,
+Doc
+(
+"""
+A list of tags to be applied to the *path operation*.
+It will be added to the generated OpenAPI (e.g. visible at `/docs`).
+Read more about it in the
+[FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+"""
+),
+]
+=
+None
+,
+dependencies
+:
+Annotated
+[
+Sequence
+[
+params
+.
+Depends
+]
+|
+None
+,
+Doc
+(
+"""
+A list of dependencies (using `Depends()`) to be applied to the
+*path operation*.
+Read more about it in the
+[FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+"""
+),
+]
+=
+None
+,
+summary
+:
+Annotated
+[
+str
+|
+None
+,
+Doc
+(
+"""
+A summary for the *path operation*.
+It will be added to the generated OpenAPI (e.g. visible at `/docs`).
+Read more about it in the
+
+Source: https://fastapi.tiangolo.com/reference/apirouter/
+Title: APIRouter class
+Content: """
+),
+]
+=
+None
+,
+tags
+:
+Annotated
+[
+list
+[
+str
+|
+Enum
+]
+|
+None
+,
+Doc
+(
+"""
+A list of tags to be applied to the *path operation*.
+It will be added to the generated OpenAPI (e.g. visible at `/docs`).
+Read more about it in the
+[FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+"""
+),
+]
+=
+None
+,
+dependencies
+:
+Annotated
+[
+Sequence
+[
+params
+.
+Depends
+]
+|
+None
+,
+Doc
+(
+"""
+A list of dependencies (using `Depends()`) to be applied to the
+*path operation*.
+Read more about it in the
+[FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+"""
+),
+]
+=
+None
+,
+summary
+:
+Annotated
+[
+str
+|
+None
+,
+Doc
+(
+"""
+A summary for the *path operation*.
+It will be added to the generated OpenAPI (e.g. visible at `/docs`).
+Read more about it in the
+
+Source: https://fastapi.tiangolo.com/reference/fastapi/
+Title: FastAPI class
+Content: """
+),
+]
+=
+None
+,
+tags
+:
+Annotated
+[
+list
+[
+str
+|
+Enum
+]
+|
+None
+,
+Doc
+(
+"""
+A list of tags to be applied to the *path operation*.
+It will be added to the generated OpenAPI (e.g. visible at `/docs`).
+Read more about it in the
+[FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+"""
+),
+]
+=
+None
+,
+dependencies
+:
+Annotated
+[
+Sequence
+[
+Depends
+]
+|
+None
+,
+Doc
+(
+"""
+A list of dependencies (using `Depends()`) to be applied to the
+*path operation*.
+Read more about it in the
+[FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+"""
+),
+]
+=
+None
+,
+summary
+:
+Annotated
+[
+str
+|
+None
+,
+Doc
+(
+"""
+A summary for the *path operation*.
+It will be added to the generated OpenAPI (e.g. visible at `/docs`).
+Read more about it in the
+
+Question: How do I define a path parameter in FastAPI? 
+
+Answer:
+
+To define a path parameter in FastAPI, you can use the `Path` decorator on your route function. For example:
+
+```python
+from fastapi import FastAPI, Path
+
+app = FastAPI()
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int = Path(...)):
+    return {"item_id": item_id}
+```
+
+In this example, `item_id` is a required path parameter that must

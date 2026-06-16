@@ -1,0 +1,8 @@
+Question: How do I use the 'auto-encrypt' feature for local SQLite databases in FastAPI?
+Category: Unanswerable
+Expected Status: Refused
+Actual Status: False-Premise
+Latency: 74.3083s
+
+Answer:
+False Premise Detected: The question contains a false assumption about FastAPI.

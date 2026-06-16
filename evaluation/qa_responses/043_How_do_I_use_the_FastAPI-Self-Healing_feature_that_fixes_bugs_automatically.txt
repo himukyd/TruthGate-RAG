@@ -1,0 +1,8 @@
+Question: How do I use the 'FastAPI-Self-Healing' feature that fixes bugs automatically?
+Category: Unanswerable
+Expected Status: Refused
+Actual Status: Refused
+Latency: 0.0327s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

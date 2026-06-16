@@ -1,0 +1,10 @@
+Question: How can I use Pydantic models for request bodies?
+Category: Answerable
+Expected Status: Success
+Actual Status: Success
+Latency: 160.6723s
+
+Answer:
+The FastAPI tutorial on request bodies covers the following main points:
+
+1. **Request Body Definition**: It explains that a request body is

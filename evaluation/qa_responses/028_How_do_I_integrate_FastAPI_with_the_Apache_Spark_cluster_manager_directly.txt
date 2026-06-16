@@ -1,0 +1,8 @@
+Question: How do I integrate FastAPI with the Apache Spark cluster manager directly?
+Category: Unanswerable
+Expected Status: Refused
+Actual Status: Refused
+Latency: 0.0312s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

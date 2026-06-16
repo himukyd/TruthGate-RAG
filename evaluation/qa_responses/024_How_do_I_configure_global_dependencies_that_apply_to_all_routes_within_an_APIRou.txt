@@ -1,0 +1,8 @@
+Question: How do I configure global dependencies that apply to all routes within an APIRouter and then override them for a specific route?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0555s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

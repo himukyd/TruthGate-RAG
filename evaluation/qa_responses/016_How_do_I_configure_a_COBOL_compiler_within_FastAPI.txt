@@ -1,0 +1,8 @@
+Question: How do I configure a COBOL compiler within FastAPI?
+Category: Unanswerable
+Expected Status: Refused
+Actual Status: False-Premise
+Latency: 64.4166s
+
+Answer:
+False Premise Detected: The question contains a false assumption about FastAPI.

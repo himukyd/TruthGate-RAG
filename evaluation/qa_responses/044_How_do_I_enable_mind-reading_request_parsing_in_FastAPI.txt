@@ -1,0 +1,8 @@
+Question: How do I enable 'mind-reading' request parsing in FastAPI?
+Category: Unanswerable
+Expected Status: Refused
+Actual Status: Refused
+Latency: 0.0282s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

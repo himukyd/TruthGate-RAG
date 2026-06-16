@@ -1,0 +1,8 @@
+Question: What is the difference between File and UploadFile?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0367s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

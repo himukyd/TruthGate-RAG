@@ -1,0 +1,8 @@
+Question: How do I handle file uploads and then trigger a background task to process the file metadata?
+Category: Answerable
+Expected Status: Success
+Actual Status: Refused
+Latency: 0.0548s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

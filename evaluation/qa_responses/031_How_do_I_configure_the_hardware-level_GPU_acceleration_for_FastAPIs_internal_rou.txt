@@ -1,0 +1,8 @@
+Question: How do I configure the hardware-level GPU acceleration for FastAPI's internal router?
+Category: Unanswerable
+Expected Status: Refused
+Actual Status: Refused
+Latency: 0.0332s
+
+Answer:
+I'm sorry, but I cannot find enough information in the FastAPI documentation to answer that question accurately.

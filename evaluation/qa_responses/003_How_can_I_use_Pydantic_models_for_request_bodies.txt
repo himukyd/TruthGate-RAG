@@ -1,0 +1,8 @@
+Question: How can I use Pydantic models for request bodies?
+Category: Answerable
+Expected Status: Success
+Actual Status: Success
+Latency: 90.7949s
+
+Answer:
+When sending data from a client to your API, you utilize the `request body` feature. This involves defining a Pydantic model within your API endpoint function, which encapsulates the structure and validation rules for the incoming data. By doing so, you ensure that the data format matches what your API expects, enhancing both security and reliability. The

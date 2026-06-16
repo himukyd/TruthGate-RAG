@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./.env:/app/.env
+      - hf_cache:/root/.cache/huggingface
+    ports:
+      - "8000:8000"
+    environment:
+      - HF_HOME=/root/.cache/huggingface
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+  frontend:
+    build: .
+    volumes:
+      - ./.env:/app/.env
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    environment:
+      - BACKEND_URL=http://backend:8000
+    command: streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0
+
+volumes:
+  hf_cache:
