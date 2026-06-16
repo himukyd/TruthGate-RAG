@@ -9,7 +9,7 @@ TruthGate-RAG is a specialized Retrieval-Augmented Generation (RAG) system desig
     2.  **False Premise Detection:** Flags technical misconceptions (e.g., "Why does FastAPI require Java?") with 100% accuracy.
     3.  **Context Sufficiency:** Ensures the retrieved documentation actually contains the answer before attempting to respond.
 *   **Grounded Generation:** Answers are restricted to the provided context and citations are automatically extracted.
-*   **Optimized Local Inference:** Runs entirely locally using **Qwen-2.5-1.5B-Instruct** on Apple Silicon (MPS) or CUDA.
+*   **Optimized Local Inference:** Runs entirely locally using **Qwen-2.5-1.5B-Instruct** on Apple Silicon.
 *   **Comprehensive Evaluation:** Includes a full evaluation harness with per-category accuracy metrics and latency profiling.
 
 ## 🛠️ Architecture
