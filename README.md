@@ -1,8 +1,8 @@
-# 🛡️ TruthGate-RAG: Reliable FastAPI Technical Assistant
+#  TruthGate-RAG: Reliable FastAPI Technical Assistant
 
 TruthGate-RAG is a specialized Retrieval-Augmented Generation (RAG) system designed to provide accurate, documentation-grounded answers about **FastAPI**. It is uniquely engineered to **refuse** unanswerable questions, detect **adversarial prompt injections**, and identify **false technical premises**.
 
-## 🚀 Key Features
+##  Key Features
 
 *   **Multi-Stage Validation Pipeline:** Every query passes through three security and logic gates:
     1.  **Adversarial Detection:** Identifies prompt leaks and malicious injections using LLM-based reasoning.
@@ -12,7 +12,7 @@ TruthGate-RAG is a specialized Retrieval-Augmented Generation (RAG) system desig
 *   **Optimized Local Inference:** Runs entirely locally using **Qwen-2.5-1.5B-Instruct** on Apple Silicon.
 *   **Comprehensive Evaluation:** Includes a full evaluation harness with per-category accuracy metrics and latency profiling.
 
-## 🛠️ Architecture
+## Architecture
 
 *   **LLM:** Qwen/Qwen2.5-1.5B-Instruct
 *   **Embeddings:** HuggingFace `all-MiniLM-L6-v2`
@@ -21,7 +21,7 @@ TruthGate-RAG is a specialized Retrieval-Augmented Generation (RAG) system desig
 *   **Backend:** FastAPI
 *   **Frontend:** Streamlit
 
-## 📋 Installation & Setup
+##  Installation & Setup
 
 1.  **Clone and Enter:**
     ```bash
@@ -45,7 +45,7 @@ TruthGate-RAG is a specialized Retrieval-Augmented Generation (RAG) system desig
     HUGGINGFACEHUB_API_TOKEN=your_token_here
     ```
 
-## 🏃 Running the System
+##  Running the System
 
 Use the included `Makefile` for standard operations:
 
@@ -66,7 +66,7 @@ Use the included `Makefile` for standard operations:
     make run-frontend
     ```
 
-## 📊 Evaluation Results
+##  Evaluation Results
 
 The system has been evaluated against a balanced 20-question test set:
 
@@ -79,7 +79,7 @@ The system has been evaluated against a balanced 20-question test set:
 
 *Detailed reports can be found in `evaluation/report.tex`.*
 
-## 📂 Project Structure
+##  Project Structure
 
 *   `rag/`: Core RAG logic, detection nodes, and LLM configuration.
 *   `ingestion/`: Scraper and chunking logic for FastAPI docs.
