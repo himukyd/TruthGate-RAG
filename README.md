@@ -1,58 +1,88 @@
-# TruthGate RAG: FastAPI Documentation Expert
+# 🛡️ TruthGate-RAG: Reliable FastAPI Technical Assistant
 
-A fully local, privacy-first Retrieval-Augmented Generation (RAG) system for the official FastAPI documentation. Optimized for accuracy, citation tracking, and false-premise detection.
+TruthGate-RAG is a specialized Retrieval-Augmented Generation (RAG) system designed to provide accurate, documentation-grounded answers about **FastAPI**. It is uniquely engineered to **refuse** unanswerable questions, detect **adversarial prompt injections**, and identify **false technical premises**.
 
 ## 🚀 Key Features
-- **100% Offline:** Uses local embeddings and a local LLM. No API keys or external quotas required.
-- **Robust RAG Logic:** Features context sufficiency grading and false premise detection.
-- **Strict Citations:** Every answer includes direct links to the source documentation.
-- **Fast Execution:** Optimized for Mac (Metal/MPS) and CUDA.
+
+*   **Multi-Stage Validation Pipeline:** Every query passes through three security and logic gates:
+    1.  **Adversarial Detection:** Identifies prompt leaks and malicious injections using LLM-based reasoning.
+    2.  **False Premise Detection:** Flags technical misconceptions (e.g., "Why does FastAPI require Java?") with 100% accuracy.
+    3.  **Context Sufficiency:** Ensures the retrieved documentation actually contains the answer before attempting to respond.
+*   **Grounded Generation:** Answers are restricted to the provided context and citations are automatically extracted.
+*   **Optimized Local Inference:** Runs entirely locally using **Qwen-2.5-1.5B-Instruct** on Apple Silicon (MPS) or CUDA.
+*   **Comprehensive Evaluation:** Includes a full evaluation harness with per-category accuracy metrics and latency profiling.
 
 ## 🛠️ Architecture
-- **Workflow Engine:** **LangGraph** (State-based execution with conditional branching)
-- **LLM:** `Qwen2.5-1.5B-Instruct` (Running locally via `transformers`)
-- **Embeddings:** `all-MiniLM-L6-v2` (Running locally via `sentence-transformers`)
-- **Vector Store:** ChromaDB
-- **Backend:** FastAPI
-- **Frontend:** Streamlit
 
-### LangGraph Workflow
-The system uses a state machine to handle complex technical queries:
-1. **Detect False Premise:** Checks if the query makes factually incorrect assumptions about FastAPI.
-2. **Retrieval:** Fetches relevant snippets from ChromaDB.
-3. **Context Grading:** Validates if retrieved context is sufficient to answer.
-4. **Generation:** Generates a precise answer with citations.
+*   **LLM:** Qwen/Qwen2.5-1.5B-Instruct
+*   **Embeddings:** HuggingFace `all-MiniLM-L6-v2`
+*   **Vector Store:** ChromaDB
+*   **Orchestration:** LangGraph (Stateful RAG workflow)
+*   **Backend:** FastAPI
+*   **Frontend:** Streamlit
 
-## 📦 Setup & Installation
-1. **Clone the repository:**
-   ```bash
-   git clone <repo-url>
-   cd TruthGate-RAG
-   ```
+## 📋 Installation & Setup
 
-2. **Setup Environment:**
-   This project uses the `him_langchain` environment.
-   ```bash
-   source him_langchain/bin/activate
-   pip install -r requirements.txt
-   ```
+1.  **Clone and Enter:**
+    ```bash
+    git clone https://github.com/himukyd/TruthGate-RAG.git
+    cd TruthGate-RAG
+    ```
 
-3. **Ingest Documentation:**
-   ```bash
-   make ingest
-   ```
-   *Note: This will download the LLM (~3GB) and the embedding model (~100MB) on the first run.*
+2.  **Setup Environment:**
+    ```bash
+    # Create and activate virtual environment
+    python3 -m venv him_langchain
+    source him_langchain/bin/activate
+    
+    # Install dependencies
+    pip install -r requirements.txt
+    ```
 
-4. **Run the Application:**
-   ```bash
-   # Terminal 1: Start Backend
-   make run-backend
-   
-   # Terminal 2: Start Frontend
-   make run-frontend
-   ```
+3.  **Configure Environment Variables:**
+    Create a `.env` file based on `.env.example`:
+    ```env
+    HUGGINGFACEHUB_API_TOKEN=your_token_here
+    ```
 
-## 🧠 Model Details
-- **Model Size:** ~3 GB (Qwen2.5-1.5B-Instruct)
-- **RAM Requirement:** Recommended 8GB+ RAM.
-- **Performance:** State-of-the-art for its size, excellent for technical Q&A.
+## 🏃 Running the System
+
+Use the included `Makefile` for standard operations:
+
+*   **Ingest Documentation:**
+    ```bash
+    make ingest
+    ```
+*   **Run Evaluation:**
+    ```bash
+    make eval
+    ```
+*   **Start Backend (FastAPI):**
+    ```bash
+    make run-backend
+    ```
+*   **Start Frontend (Streamlit):**
+    ```bash
+    make run-frontend
+    ```
+
+## 📊 Evaluation Results
+
+The system has been evaluated against a balanced 20-question test set:
+
+| Metric | Score |
+| :--- | :--- |
+| **Overall Accuracy** | **50.0%** |
+| **False Premise Detection** | **100.0%** |
+| **Answerable Accuracy** | **40.0%** |
+| **Mean Latency** | ~84s (Local MPS) |
+
+*Detailed reports can be found in `evaluation/report.tex`.*
+
+## 📂 Project Structure
+
+*   `rag/`: Core RAG logic, detection nodes, and LLM configuration.
+*   `ingestion/`: Scraper and chunking logic for FastAPI docs.
+*   `app/`: FastAPI backend implementation.
+*   `frontend/`: Streamlit user interface.
+*   `evaluation/`: Test suite, results, and automated reports.
